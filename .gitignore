@@ -1,3 +1,7 @@
+.DS_Store
+/.idea/
+/.vscode/
+
 # Prerequisites
 *.d
 
@@ -41,6 +45,7 @@
 *.su
 *.idb
 *.pdb
+cmake-build-debug/
 
 # Kernel Module Compile Results
 *.mod*
