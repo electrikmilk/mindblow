@@ -7,7 +7,6 @@
 
 void interpret() {
     stack.items = malloc(sizeof(size_t));
-    stack.size = operations.size;
     while (p < operations.size) {
         op operation = operations.items[p];
         switch (operation.kind) {

@@ -9,7 +9,7 @@ unsigned long head = 0;
 unsigned long p = 0;
 
 typedef struct {
-    char *items;
+    unsigned char *items;
     size_t size;
 } memory_stack;
 
@@ -46,7 +46,7 @@ void grow_stack() {
     if (head <= stack.size) {
         return;
     }
-    if ((stack.items = realloc(stack.items, stack.size * sizeof(size_t) + sizeof(size_t))) == NULL) {
+    if ((stack.items = realloc(stack.items, sizeof(stack.items) + sizeof(unsigned char *))) == NULL) {
         interpret_error("failed to allocate stack when moving right! D:");
     }
     stack.size++;
