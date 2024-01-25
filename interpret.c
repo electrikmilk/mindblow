@@ -23,8 +23,11 @@ void interpret() {
 
                 head -= operation.operand;
                 break;
-            case OP_IN:
-                printf("TODO: input\n");
+            case OP_IN: {
+                char input[1];
+                scanf("%c", input);
+                stack.items[head] = input[0];
+            }
                 break;
             case OP_OUT:
                 for (size_t i = 0; i < operation.operand; i++) {
