@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.27)
-project(bf C)
+project(mindblow C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(bf main.c)
+add_executable(mindblow main.c)

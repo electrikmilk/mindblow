@@ -15,7 +15,7 @@ void print_debug();
 
 int main(int argc, char **argv) {
     if (argc <= 1) {
-        printf("usage: bf [FILE]\n");
+        printf("usage: mindblow [FILE]\n");
         return 1;
     }
 
