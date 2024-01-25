@@ -41,7 +41,7 @@ address_stack addresses;
 char *buffer;
 size_t file_length;
 
-ssize_t idx;
+long idx;
 unsigned char current_char;
 
 size_t line_idx = 1;
