@@ -110,7 +110,7 @@ void lex_error(char *message) {
     // esc seq for red
     printf("\033[31m");
 
-    printf("lexer error: %s (%s:%ld:%ld)\n\n", message, filename, line_idx, line_char_idx);
+    printf("[Lexer] Error: %s (%s:%ld:%ld)\n\n", message, filename, line_idx, line_char_idx);
     print_operations();
 
     // reset esc seqs

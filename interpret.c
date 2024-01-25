@@ -18,7 +18,7 @@ void interpret() {
                 break;
             case OP_LEFT:
                 if (head == 0) {
-                    interpret_error("underflow of memory! trying to move left, but at bottom of stack.");
+                    interpret_error("cannot move anymore left, already at bottom of stack!");
                 }
 
                 head -= operation.operand;

@@ -28,10 +28,10 @@ void interpret_error(char *message) {
 
     op current_operation = operations.items[p];
 
-    printf("interpreter error: %s (%s)\n\n", message, filename);
-    printf("instruction: %ld\n", p);
-    printf("head: %ld\n", head);
-    printf("operation: %c (%ld)\n\n", current_operation.kind, current_operation.operand);
+    printf("[Interpreter] Error: %s (%s)\n\n", message, filename);
+    printf("\tInstruction: %ld\n", p);
+    printf("\tTape head: %ld\n", head);
+    printf("\tOperation: %c (%ld)\n\n", current_operation.kind, current_operation.operand);
 
     // reset esc seqs
     printf("\033[0m");
