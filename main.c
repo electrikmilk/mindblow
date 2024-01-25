@@ -4,11 +4,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "lexer.c"
 #include "interpret.c"
 
 void load_file(FILE *);
+
+void print_debug();
 
 int main(int argc, char **argv) {
     if (argc <= 1) {
@@ -31,8 +34,9 @@ int main(int argc, char **argv) {
 
     interpret();
 
-    print_operations();
-    print_stack();
+    if (argc == 3 && strcmp(argv[2], "--debug") == 0) {
+        print_debug();
+    }
 
     free(operations.items);
     free(addresses.items);
@@ -51,4 +55,12 @@ void load_file(FILE *fptr) {
         exit(1);
     }
     fread(buffer, 1, file_length, fptr);
+}
+
+void print_debug() {
+    printf("\n");
+    print_operations();
+
+    printf("\n");
+    print_stack();
 }
