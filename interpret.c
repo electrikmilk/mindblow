@@ -6,7 +6,7 @@
 #include "interpret.h"
 
 void interpret() {
-    stack.items = malloc(sizeof(size_t));
+    stack.items = malloc(sizeof(unsigned char));
     while (p < operations.size) {
         op operation = operations.items[p];
         switch (operation.kind) {
