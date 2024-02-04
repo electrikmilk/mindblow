@@ -111,10 +111,11 @@ void lex_error(char *message) {
     printf("\033[31m");
 
     printf("[Lexer] Error: %s (%s:%ld:%ld)\n\n", message, filename, line_idx, line_char_idx);
-    print_operations();
 
     // reset esc seqs
     printf("\033[0m");
+
+    print_operations();
     exit(1);
 }
 
